@@ -1,0 +1,38 @@
+---
+description: Conventions for working with Antimetal investigation data and MCP tools
+alwaysApply: true
+---
+
+antimetal-conventions:
+
+- **API key required**: All MCP tools need a valid `ANTIMETAL_API_KEY` environment variable. If a tool call fails with an auth error, prompt the user to set it: `export ANTIMETAL_API_KEY="your-key"` (get one at [antimetal.com](https://antimetal.com) under account settings). Suggest adding it to their shell profile so it persists.
+- When referencing Antimetal issues, prefer the issue number (e.g., #42) over the UUID for readability.
+- Artifact IDs follow the format `type:provider:id` (e.g., `log:datadog:a9c131...`, `trace:gcp:abc123`). These come from `documentId` fields in causal graph evidence nodes.
+- Issue statuses are: `investigating`, `ready_to_fix`, `resolved`, `muted`.
+- Issue severities are: `high`, `medium`, `low`.
+- When applying remediations, always verify code changes against the local codebase before committing.
+- The `ask` tool supports multi-turn conversations via `conversation_id` -- always pass it for follow-ups.
+
+## MCP Tools
+
+| Tool | Purpose |
+|---|---|
+| `search_issues` | Paginated issue list with filters (status, environment, search text) |
+| `get_issue_report` | Full investigative report—root cause, timeline, causal graph |
+| `get_issue_fixes` | Remediation steps for a specific issue |
+| `investigate_issue` | Create a new issue and start async automated investigation (3-10 min) |
+| `get_artifact` | Retrieve raw evidence by document ID (metrics, traces, logs, files, events, topology) |
+| `ask` | Query Antimetal's AI about infrastructure, software, deployments, telemetry, logs, code -- supports follow-up via `conversation_id` |
+
+## Causal Graph Concepts
+
+- **Node types**: `outcome` (what broke), `cause` (why it broke), `confounder` (correlated but not causal), `mediator` (how the cause propagated)
+- **Confidence levels** (ordered): `confirmed` > `likely` > `probable` > `unclear` > `unknown`
+- Distinguish causes from confounders -- correlation is not causation
+- Mediators show the propagation path from cause to outcome
+
+## Remediation Step Types
+
+- **info**: Context and explanation for why the fix works
+- **code**: File changes as `{ filename, language?, content }` -- adapt to local codebase
+- **cli**: Shell commands -- adapt for local environment, present for user approval

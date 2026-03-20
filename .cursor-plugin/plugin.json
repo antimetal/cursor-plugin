@@ -1,0 +1,23 @@
+{
+  "name": "antimetal",
+  "displayName": "Antimetal",
+  "version": "1.0.0",
+  "description": "Bring Antimetal's software investigation intelligence into your editor. Triage problems, investigate root causes, and apply remediations without leaving Cursor.",
+  "author": {
+    "name": "Antimetal",
+    "email": "support@antimetal.com"
+  },
+  "homepage": "https://antimetal.com",
+  "logo": "assets/logo.svg",
+  "keywords": [
+    "debugging",
+    "cloud",
+    "incidents",
+    "observability",
+    "infrastructure",
+    "investigation",
+    "remediation",
+    "mcp",
+    "devops"
+  ]
+}
