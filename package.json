@@ -1,0 +1,30 @@
+{
+  "name": "cursor-plugin",
+  "version": "1.0.0",
+  "description": "Bring [Antimetal's](https://antimetal.com) software investigation intelligence into Cursor. Triage problems, investigate root causes, fetch observability artifacts, and apply remediations—all without leaving your editor.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:38249/git/antimetal/cursor-plugin"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "autoprefixer": "^10.4.27",
+    "better-sqlite3": "^12.8.0",
+    "next": "^14.2.35",
+    "postcss": "^8.5.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^6.0.2"
+  }
+}
