@@ -18,6 +18,15 @@ Add this to your shell profile (`~/.zshrc`, `~/.bashrc`, etc.) so it persists.
 
 ### 3. Install the Plugin
 
+#### Claude Code
+
+Add the Antimetal marketplace and install the plugin:
+
+```
+/plugin marketplace add antimetal/antimetal-plugin
+/plugin install antimetal@antimetal
+```
+
 #### Cursor
 
 Install from the [Cursor Marketplace](https://cursor.com/marketplace) by searching for **Antimetal**, or use the command palette:
@@ -26,15 +35,7 @@ Install from the [Cursor Marketplace](https://cursor.com/marketplace) by searchi
 /add-plugin antimetal
 ```
 
-#### Claude Code (Anthropic Marketplace)
-
-Install from the [Anthropic Marketplace](https://marketplace.anthropic.com) by searching for **Antimetal**, or install directly via the CLI:
-
-```bash
-claude install antimetal
-```
-
-Once installed, use the slash commands `/investigate`, `/fix`, and `/setup` to get started.
+Once installed, the skills activate automatically based on your task context.
 
 ## What's Included
 
@@ -51,13 +52,11 @@ Connects to Antimetal's remote MCP server at `mcp.antimetal.com`, giving the AI 
 | `get_artifact` | Retrieve raw evidence: logs, traces, metrics, events, files, topology |
 | `ask` | Ask Antimetal's AI about infrastructure, software, deployments, telemetry, logs, code |
 
-### Skills / Commands
+### Skills
 
 - **investigate** — Entry point for any software problem. Searches issues, queries Antimetal's AI, reads investigative reports and causal graphs, and routes to fix
 - **fix** — Apply Antimetal's remediation to your codebase, adapted for your local environment
-- **setup** — Configure and verify your Antimetal API key (Claude Code only)
-
-> In Cursor, these are available as skills. In Claude Code, use them as slash commands (`/investigate`, `/fix`, `/setup`).
+- **setup** — Configure and verify your Antimetal API key
 
 ### Rules
 

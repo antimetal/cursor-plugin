@@ -4,5 +4,5 @@
 
 - Initial release
 - MCP server integration with tools for issues, artifacts, and AI query
-- Skills: investigate, fix, antimetal-mcp-setup
+- Skills: investigate, fix, setup
 - Rules: antimetal-conventions
