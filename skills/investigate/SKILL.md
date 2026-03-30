@@ -26,7 +26,7 @@ If the issue is still in investigating status, let the user know that the invest
 Walk the user through the findings, translate a dense report into a clear picture.
 Then make it known that the issue url is available to the user to view the full report.
 
-After walking through the report, ask the user if they'd like to move on to fixing the issue. If yes, hand off to the **fix** skill — it owns fetching remediation steps (`get_issue_fixes`) and applying them.
+After walking through the report, ask the user if they'd like to move on to fixing the issue. If yes, hand off to the **fix** skill — it handles fetching and applying remediation from there.
 
 ### Step 3: No Match → Investigate
 

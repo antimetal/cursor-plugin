@@ -1,5 +1,5 @@
 ---
-name: setup
+name: antimetal-mcp-setup
 description: Ensures the Antimetal MCP server is configured and ready to use. Run this before attempting to call any Antimetal MCP tools—if the API key is missing, tools will fail silently.
 ---
 
@@ -9,11 +9,13 @@ You are the gatekeeper. Before any other skill (investigate, fix) can use the An
 
 ## How It Works
 
-The Antimetal MCP server authenticates via an API key sent in the `Authorization` header. The plugin's MCP configuration (`.mcp.json` at the plugin root) references the `ANTIMETAL_API_KEY` environment variable. If this variable is missing or empty, every MCP request will fail silently.
+The Antimetal MCP server authenticates via an API key sent in the `Authorization` header. The plugin's MCP configuration (`../../mcp.json` relative to this file) references the `ANTIMETAL_API_KEY` environment variable. If this variable is missing or empty, every MCP request will fail silently.
 
 ## Setup Checklist
 
-1. **Verify the API key is set.** Check whether `ANTIMETAL_API_KEY` exists in the environment.
+1. **Read the MCP config.** Open `../../mcp.json` (the grandparent directory of this skill) and confirm it references `ANTIMETAL_API_KEY` in the authorization header.
+
+2. **Verify the API key is set.** Check whether `ANTIMETAL_API_KEY` exists in the environment.
 
    - **If it's set:** skip ahead -- you're good to go.
    - **If it's not set:** stop here. Walk the user through getting one:
@@ -23,11 +25,11 @@ The Antimetal MCP server authenticates via an API key sent in the `Authorization
         ```bash
         export ANTIMETAL_API_KEY="am_..."
         ```
-     4. Source the profile or restart the terminal
+     4. Source the profile or restart the terminal, then reload the Cursor window via the Command Palette (`⌘⇧P` on Mac, `Ctrl+Shift+P` on Windows/Linux) → **Reload Window**
 
    Do not proceed past this step without a valid key. Do not check tool schemas, do not attempt MCP calls. The user must provide the key first.
 
-2. **Hand off.** Once the key is confirmed, continue to whichever skill the user needs -- investigate or fix.
+3. **Hand off.** Once the key is confirmed, continue to whichever skill the user needs -- investigate or fix.
 
 ## What This Skill Is NOT
 
