@@ -35,32 +35,29 @@ Install from the [Cursor Marketplace](https://cursor.com/marketplace) by searchi
 /add-plugin antimetal
 ```
 
-Once installed, the skills activate automatically based on your task context.
-
 ## What's Included
 
 ### MCP Server
 
-Connects to Antimetal's remote MCP server at `mcp.antimetal.com`, giving the AI agent access to these tools:
+Connects to Antimetal's remote MCP server at `mcp.antimetal.com`, giving the Cursor agent access to these tools:
 
-| Tool | Description |
-|------|-------------|
-| `search_issues` | Paginated list of issues with severity, status, and environment |
-| `get_issue_report` | Full investigative report—root cause, timeline, causal graph |
-| `get_issue_fixes` | Remediation steps (code changes, CLI commands, context) |
-| `investigate_issue` | Create a new issue and start async automated investigation |
-| `get_artifact` | Retrieve raw evidence: logs, traces, metrics, events, files, topology |
-| `ask` | Ask Antimetal's AI about infrastructure, software, deployments, telemetry, logs, code |
+| Tool                | Description                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------- |
+| `search_issues`     | Paginated list of issues with severity, status, and environment                       |
+| `get_issue_report`  | Full investigative report—root cause, timeline, causal graph                          |
+| `get_issue_fixes`   | Remediation steps (code changes, CLI commands, context)                               |
+| `investigate_issue` | Create a new issue and start async automated investigation                            |
+| `get_artifact`      | Retrieve raw evidence: logs, traces, metrics, events, files, topology                 |
+| `ask`               | Ask Antimetal's AI about infrastructure, software, deployments, telemetry, logs, code |
 
 ### Skills
 
-- **investigate** — Entry point for any software problem. Searches issues, queries Antimetal's AI, reads investigative reports and causal graphs, and routes to fix
-- **fix** — Apply Antimetal's remediation to your codebase, adapted for your local environment
-- **setup** — Configure and verify your Antimetal API key
+- **investigate**—Entry point for any software problem. Searches issues, queries Antimetal's AI, reads investigative reports and causal graphs, and routes to fix
+- **fix**—Apply Antimetal's remediation to your codebase, adapted for your local environment
 
 ### Rules
 
-- **antimetal-conventions** — Conventions for working with Antimetal data (artifact ID formats, status values, etc.)
+- **antimetal-conventions** -- Conventions for working with Antimetal data (artifact ID formats, status values, etc.)
 
 ## Example Prompts
 
