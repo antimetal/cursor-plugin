@@ -20,11 +20,16 @@ Add this to your shell profile (`~/.zshrc`, `~/.bashrc`, etc.) so it persists.
 
 #### Claude Code
 
-Add the Antimetal marketplace and install the plugin:
+Within a claude-code session, add the Antimetal marketplace:
 
 ```
-/plugin marketplace add antimetal/antimetal-plugin
-/plugin install antimetal@antimetal
+/plugin marketplace add antimetal/skills
+```
+
+Then install the plugin:
+
+```
+/plugin install antimetal-marketplace@antimetal
 ```
 
 #### Cursor
@@ -39,7 +44,7 @@ Install from the [Cursor Marketplace](https://cursor.com/marketplace) by searchi
 
 ### MCP Server
 
-Connects to Antimetal's remote MCP server at `mcp.antimetal.com`, giving the Cursor agent access to these tools:
+Connects to Antimetal's remote MCP server at `mcp.antimetal.com`, giving the AI agent access to these tools:
 
 | Tool                | Description                                                                           |
 | ------------------- | ------------------------------------------------------------------------------------- |
