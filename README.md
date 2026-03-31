@@ -29,7 +29,7 @@ Within a claude-code session, add the Antimetal marketplace:
 Then install the plugin:
 
 ```
-/plugin install antimetal-marketplace@antimetal
+/plugin install antimetal@antimetal-marketplace
 ```
 
 #### Cursor
