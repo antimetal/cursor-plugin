@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "antimetal",
-      "source": ".",
+      "source": "./",
       "description": "Triage problems, investigate root causes, fetch observability artifacts, and apply remediations"
     }
   ]
