@@ -1,6 +1,6 @@
-# Antimetal Cursor Plugin
+# Antimetal Plugin
 
-Bring [Antimetal's](https://antimetal.com) software investigation intelligence into Cursor. Triage problems, investigate root causes, fetch observability artifacts, and apply remediations—all without leaving your editor.
+Bring [Antimetal's](https://antimetal.com) software investigation intelligence into your AI coding environment. Triage problems, investigate root causes, fetch observability artifacts, and apply remediations—all without leaving your editor or terminal.
 
 ## Setup
 
@@ -18,6 +18,17 @@ Add this to your shell profile (`~/.zshrc`, `~/.bashrc`, etc.) so it persists.
 
 ### 3. Install the Plugin
 
+#### Claude Code
+
+Add the Antimetal marketplace and install the plugin:
+
+```
+/plugin marketplace add antimetal/antimetal-plugin
+/plugin install antimetal@antimetal
+```
+
+#### Cursor
+
 Install from the [Cursor Marketplace](https://cursor.com/marketplace) by searching for **Antimetal**, or use the command palette:
 
 ```
@@ -30,14 +41,14 @@ Install from the [Cursor Marketplace](https://cursor.com/marketplace) by searchi
 
 Connects to Antimetal's remote MCP server at `mcp.antimetal.com`, giving the Cursor agent access to these tools:
 
-| Tool | Description |
-|------|-------------|
-| `search_issues` | Paginated list of issues with severity, status, and environment |
-| `get_issue_report` | Full investigative report—root cause, timeline, causal graph |
-| `get_issue_fixes` | Remediation steps (code changes, CLI commands, context) |
-| `investigate_issue` | Create a new issue and start async automated investigation |
-| `get_artifact` | Retrieve raw evidence: logs, traces, metrics, events, files, topology |
-| `ask` | Ask Antimetal's AI about infrastructure, software, deployments, telemetry, logs, code |
+| Tool                | Description                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------- |
+| `search_issues`     | Paginated list of issues with severity, status, and environment                       |
+| `get_issue_report`  | Full investigative report—root cause, timeline, causal graph                          |
+| `get_issue_fixes`   | Remediation steps (code changes, CLI commands, context)                               |
+| `investigate_issue` | Create a new issue and start async automated investigation                            |
+| `get_artifact`      | Retrieve raw evidence: logs, traces, metrics, events, files, topology                 |
+| `ask`               | Ask Antimetal's AI about infrastructure, software, deployments, telemetry, logs, code |
 
 ### Skills
 

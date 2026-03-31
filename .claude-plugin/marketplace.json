@@ -1,0 +1,16 @@
+{
+  "name": "antimetal-marketplace",
+  "owner": {
+    "name": "Antimetal",
+    "email": "support@antimetal.com"
+  },
+  "version": "1.0.0",
+  "description": "Antimetal's plugin marketplace — software investigation intelligence for your editor and terminal.",
+  "plugins": [
+    {
+      "name": "antimetal",
+      "source": ".",
+      "description": "Triage problems, investigate root causes, fetch observability artifacts, and apply remediations"
+    }
+  ]
+}

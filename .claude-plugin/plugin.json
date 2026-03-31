@@ -1,0 +1,9 @@
+{
+  "name": "antimetal",
+  "description": "Bring Antimetal's software investigation intelligence into Claude Code. Triage problems, investigate root causes, fetch observability artifacts, and apply remediations—all from your terminal.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Antimetal",
+    "email": "support@antimetal.com"
+  }
+}
